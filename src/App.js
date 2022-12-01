@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NotFoundPage from "./pages/NotFoundPage"
 import ContactsPage from "./pages/ContactsPage"
 import React, { useState, useEffect } from 'react'
+import NavigationBar from ".//components/NavigationBar"
 
 
 
@@ -14,23 +15,6 @@ function App() {
   const [futureactions, fetchFutureactions] = useState([])
 
 
-
-  // const getContacts = () => {
-  //   fetch('http://localhost:8081/contacts')
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res)
-  //       fetchContacts(res)
-  //     })
-  // }
-  // const getFutureactions= () => {
-  //   fetch('http://localhost:8081/futureactions')
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res)
-  //       fetchFutureactions(res)
-  //     })
-  // }
 
 
 
@@ -44,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route path="/contacts" element={<ContactsPage contacts={contacts.map((item,i) => {
           return item
@@ -52,7 +36,9 @@ function App() {
         
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <NavigationBar/>
+      <ContactsPage/>
 
     </div>
   );

@@ -1,6 +1,5 @@
 // import './Cuadrado.css'
 import {useNavigate} from "react-router-dom"
-import axios from "axios"
 
 
 function Contact(props){

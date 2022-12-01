@@ -1,5 +1,7 @@
 import React from "react"
 import {useNavigate} from "react-router-dom"
+import "./NavigationBar.css"
+
 
 
 function NavigationBar(props){
