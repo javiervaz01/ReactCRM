@@ -13,13 +13,15 @@ function NavigationBar(props){
 
     return(
         <div className="NavigationBar">
-            <button className="button" onClick={contacts}>Contacts</button>
-            <button className="button" onClick={futureactions}>Future Actions</button>
-            {/* <button className="button" onClick={contacts}></button>
-            <button className="button" onClick={contacts}></button>
-            <button className="button" onClick={contacts}></button>
-            <button className="button" onClick={contacts}></button> */}
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contacts">Contacts</a></li>
+            <li><a href="/futureactions">Future Actions</a></li>
+            <li ><a href="/notfound">Help</a></li>
+            <li><a href="/opportunities">Opportunities</a></li>
+            <li><a href="/clients">Clients</a></li>
 
+            </ul>
 
 
 

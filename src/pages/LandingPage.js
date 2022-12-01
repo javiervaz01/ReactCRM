@@ -1,4 +1,5 @@
 import NavigationBar from "../components/NavigationBar";
+import "./ContactsPage.css"
 
 
 function LandingPage(){
@@ -12,6 +13,7 @@ function LandingPage(){
         <div className="App">
         <h1> WELCOME TO MY CRM APPLICATION, ENJOY!</h1>
           
+        <img class="main" src="crmpicture.webp" alt="Main"></img>
         </div>
       </div>
       )

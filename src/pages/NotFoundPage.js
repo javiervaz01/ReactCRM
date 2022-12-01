@@ -1,9 +1,14 @@
+import NavigationBar from "../components/NavigationBar";
+
+
 function NotFoundPage(){
 
     return(
     <div className="main">
+                      <NavigationBar />
+
       Error 404.
-    Page Not Found
+    Nothing found here!
     </div>
     )
 

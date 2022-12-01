@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios, { Axios } from 'axios';
 import React from 'react'
 import "./ContactsPage.css"
+import NavigationBar from '../components/NavigationBar';
 
 export default class ContactsPage extends React.Component {
 
@@ -21,24 +22,27 @@ export default class ContactsPage extends React.Component {
   render() {
     return (
       <div className="App">
+                <NavigationBar />
 
+        <div className='rows'>
         {
           this.state.contacts.map(contact =>
             <div className='card' key={contact.id}>
               <div className='container'>
-                <ul className='list'>
-                <li><h3>{contact.id}</h3></li>
+                <div className='list'>
+                <h4>Id: {contact.id}</h4>
 
-                <li><h3>{contact.contactNameAndSurname}</h3></li>
-                <li><h3>{contact.contactMethod}</h3></li>
-                <li><h3>{contact.date}</h3></li>
-                </ul>
+                <p>Name: {contact.contactNameAndSurname}</p>
+                <p>{contact.contactMethod}</p>
+                <p>{contact.date}</p>
+                </div>
                 <img class="resize" src="avatar.png" alt="Avatar"></img>
               
             </div>
             </div>
           )
         }
+        </div>
 
       </div>
 
