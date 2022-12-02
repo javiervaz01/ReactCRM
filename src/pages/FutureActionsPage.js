@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios, { Axios } from 'axios';
 import React from 'react'
-import "./ContactsPage.css"
+import "./AllPages.css"
 import NavigationBar from '../components/NavigationBar';
 
 export default class FutureActionsPage extends React.Component {

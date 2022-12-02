@@ -1,5 +1,5 @@
 import NavigationBar from "../components/NavigationBar";
-import "./ContactsPage.css"
+import "./AllPages.css"
 
 
 function LandingPage(){

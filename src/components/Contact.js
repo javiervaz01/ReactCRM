@@ -1,24 +1,53 @@
-// import './Cuadrado.css'
-import {useNavigate} from "react-router-dom"
+import { useEffect, useState } from 'react';
+import axios, { Axios } from 'axios';
+import React from 'react'
+import '../pages/AllPages.css'
+import NavigationBar from '../components/NavigationBar';
+import { useParams } from 'react-router-dom'
 
 
-function Contact(props){
+export default function ContactsPage(){
 
-    const navigate = useNavigate()
 
-    //change to opportunity and viceversa then
-    //change to client and viceversa then (with axios both)
+    const {id} = useParams()
 
-    return(
-    <div className="AllContacts" >
-        {/* put images to contacts would be nice */}
-        <div class="container">
-            <h3>{props.action}</h3>
+
+  
+    axios.get(`http://localhost:8081/contacts`+id).then(res => {
+      const contact = res.data;
+    })
+  
+
+    return (
+      <div className="App">
+                <NavigationBar />
+
+        {/* <div className='rows'> */}
+        {
+          this.contact.map(contact =>
+            <div className='card' key={contact.id}>
+              <div className='container'>
+                <div className='list'>
+                <h4>Id: {contact.id}</h4>
+
+                <p>Name: {contact.contactNameAndSurname}</p>
+                <p>{contact.contactMethod}</p>
+                <p>{contact.date}</p>
+                </div>
+                <img class="resize" src="avatar.png" alt="Avatar"></img>
+              
+            </div>
+            </div>
+          )
+        }
         </div>
-        {/* add buttons here for doing things with the props */}
-    </div>
+
+      // </div>
+
+
     )
 
-}
+  }
 
-export default Contact;
+
+

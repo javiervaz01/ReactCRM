@@ -4,9 +4,10 @@ import NotFoundPage from "./pages/NotFoundPage"
 import ContactsPage from "./pages/ContactsPage"
 import LandingPage from "./pages/LandingPage"
 import React, { useState, useEffect } from 'react'
-import NavigationBar from ".//components/NavigationBar"
 import FutureActionsPage from './pages/FutureActionsPage';
-
+import OpportunitiesPage from './pages/OpportunitiesPAge';
+import ClientsPage from './pages/ClientsPage';
+import Contact from './components/Contact'
 
 
 
@@ -26,6 +27,12 @@ function App() {
         <Route path='/notfound' element={<NotFoundPage/>}></Route>
         <Route path='/contacts' element={<ContactsPage/>}></Route>
         <Route path='/futureactions' element={<FutureActionsPage/>}></Route>
+        <Route path='/opportunities' element={<OpportunitiesPage/>}></Route>
+        <Route path='/clients' element={<ClientsPage/>}></Route>
+        <Route path='contacts/:contactId' element={<Contact/>} />
+
+
+
 
 
 

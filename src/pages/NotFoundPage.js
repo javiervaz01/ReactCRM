@@ -7,8 +7,8 @@ function NotFoundPage(){
     <div className="main">
                       <NavigationBar />
 
-      Error 404.
-    Nothing found here!
+      <h3>Need help?</h3>
+      <h3>Go read the documentation!</h3>
     </div>
     )
 

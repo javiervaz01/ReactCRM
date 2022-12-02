@@ -2,19 +2,20 @@ import { useEffect, useState } from 'react';
 import axios, { Axios } from 'axios';
 import React from 'react'
 import "./AllPages.css"
+import {BrowserRouter as Router,Route,Routes,Link,} from "react-router-dom";
 import NavigationBar from '../components/NavigationBar';
 
-export default class ContactsPage extends React.Component {
+export default class ClientsPage extends React.Component {
 
 
   state = {
-    contacts: []
+    clients: []
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:8081/contacts`).then(res => {
-      const contacts = res.data;
-      this.setState({ contacts });
+    axios.get(`http://localhost:8081/clients`).then(res => {
+      const clients = res.data;
+      this.setState({ clients });
     })
   }
 
@@ -26,15 +27,15 @@ export default class ContactsPage extends React.Component {
 
         {/* <div className='rows'> */}
         {
-          this.state.contacts.map(contact =>
-            <div className='card' key={contact.id}>
+          this.state.clients.map(client =>
+            <div className='card' key={client.id}>
               <div className='container'>
                 <div className='list'>
-                <h4>Id: {contact.id}</h4>
+                <h4>Id: {client.id}</h4>
 
-                <p>Name: {contact.contactNameAndSurname}</p>
-                <p>{contact.contactMethod}</p>
-                <p>{contact.date}</p>
+                <p>Name: {client.name}</p>
+                {/* <p><a href="/contacts/{client.contactId}">Contact related:{}</a></p> */}
+                <Link to={`/contacts/${client.contactId}`}>Contact Related: {client.contactId}</Link>
                 </div>
                 <img class="resize" src="avatar.png" alt="Avatar"></img>
               
